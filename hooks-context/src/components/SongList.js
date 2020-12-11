@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import NewSongForm from './NewSongForm';
 
 const SongList = () => {
@@ -10,7 +10,7 @@ const SongList = () => {
   ]);
   const [age, setAge] = useState(20);
   const addSong = (title) => {
-    setSongs([...songs, { title: title, id: 5 }]);
+    setSongs([...songs, { title: title, id: uuid() }]);
   };
 
   useEffect(() => {
